@@ -7,7 +7,8 @@ const pageTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — ${SITE.t
 const pageDescription = description ?? SITE.description;
 
 const reqUrl = new URL(Astro.request.url);
-const canon = canonical ?? reqUrl.toString();
+// Use configured production URL for canonicalization (avoids *.pages.dev canonicals)
+const canon = canonical ?? new URL(reqUrl.pathname, SITE.url).toString();
 
 const ogType = type ?? 'website';
 ---

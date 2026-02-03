@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import { SITE } from '../../consts';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -9,12 +10,41 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const canonical = `${SITE.url}/blog/${post.slug}/`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+  author: [{ '@type': 'Person', name: SITE.author }],
+  publisher: { '@type': 'Organization', name: SITE.name },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+};
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description}>
+<BaseLayout title={post.data.title} description={post.data.description} canonical={canonical} type="article">
   <article class="prose">
     <div class="post-meta">{post.data.pubDate.toLocaleDateString()}</div>
     <h1>{post.data.title}</h1>
+
+    {post.data.tags?.length ? (
+      <div class="post-meta" style="margin: 10px 0 0">
+        Tags:{' '}
+        {post.data.tags.map((t, i) => (
+          <span>
+            <a href={`/tags/${t}/`}>{t}</a>
+            {i < post.data.tags.length - 1 ? ', ' : ''}
+          </span>
+        ))}
+      </div>
+    ) : null}
+
     <Content />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </article>
 </BaseLayout>

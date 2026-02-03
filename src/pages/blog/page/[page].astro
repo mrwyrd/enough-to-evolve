@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const PAGE_SIZE = 10;
+  const posts = (await getCollection('blog', ({ data }) => !data.draft))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+  return pages.map((page) => ({
+    params: { page: String(page) },
+    props: { page, totalPages },
+  }));
+}
+
+const { page, totalPages } = Astro.props;
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const PAGE_SIZE = 10;
+const start = (page - 1) * PAGE_SIZE;
+const slice = posts.slice(start, start + PAGE_SIZE);
+---
+
+<BaseLayout title={`Blog (page ${page})`}>
+  <h1 class="h1">Blog</h1>
+  <p class="muted">Page {page} of {totalPages}</p>
+
+  <ul class="post-list">
+    {slice.map((p) => (
+      <li class="card" style="padding:14px">
+        <a href={`/blog/${p.slug}`}> <b>{p.data.title}</b> </a>
+        <div class="post-meta">{p.data.pubDate.toLocaleDateString()}</div>
+        {p.data.description && <div class="muted">{p.data.description}</div>}
+      </li>
+    ))}
+  </ul>
+
+  <div style="display:flex; gap:12px; margin-top: 14px; flex-wrap: wrap">
+    {page > 1 && <a class="focusable" href={page === 2 ? '/blog/' : `/blog/page/${page - 1}/`}><b>← Newer</b></a>}
+    {page < totalPages && <a class="focusable" href={`/blog/page/${page + 1}/`}><b>Older →</b></a>}
+  </div>
+</BaseLayout>
