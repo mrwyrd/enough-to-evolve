@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { estimateReadingTime } from '../../utils/readingTime';
 
 const PAGE_SIZE = 10;
 
@@ -17,23 +18,23 @@ const slice = posts.slice(0, PAGE_SIZE);
 
   <ul class="post-list">
     {slice.map((p) => (
-      <li class="card" style="padding:14px">
-        <a href={`/blog/${p.slug}`}> <b>{p.data.title}</b> </a>
-        <div class="post-meta">
-          {p.data.pubDate.toLocaleDateString()}
-          {p.data.tags?.length ? (
-            <span>
-              {' '}•{' '}
-              {p.data.tags.slice(0, 4).map((t, i) => (
-                <span>
-                  <a href={`/tags/${t}/`}>{t}</a>
-                  {i < Math.min(4, p.data.tags.length) - 1 ? ', ' : ''}
-                </span>
-              ))}
-            </span>
-          ) : null}
+      <li class="card post-card">
+        <div class="post-card-top">
+          <a class="post-card-title" href={`/blog/${p.slug}`}>{p.data.title}</a>
+          <div class="post-meta">
+            <span>{p.data.pubDate.toLocaleDateString()}</span>
+            <span aria-hidden="true">•</span>
+            <span>{estimateReadingTime(p.body ?? '').minutes} min read</span>
+          </div>
         </div>
-        {p.data.description && <div class="muted">{p.data.description}</div>}
+        {p.data.description && <p class="post-card-desc">{p.data.description}</p>}
+        {p.data.tags?.length ? (
+          <div class="tag-chips">
+            {p.data.tags.slice(0, 4).map((t) => (
+              <a class="tag-chip" href={`/tags/${t}/`}>{t}</a>
+            ))}
+          </div>
+        ) : null}
       </li>
     ))}
   </ul>

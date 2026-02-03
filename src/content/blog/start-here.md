@@ -1,15 +1,15 @@
 ---
 title: "Start Here: Turning Minimum Payments into Momentum"
-description: "A practical, numbers-first system for turning minimum payments into momentum—stabilize cashflow, control your debt, and build sustainable progress."
+description: "A numbers-first system for turning minimum payments into momentum—stabilize cashflow, control your debt, and build sustainable progress."
 pubDate: 2026-02-03
 tags: ["start-here","debt-payoff","cashflow","system"]
 ---
 
-If you’re making minimum payments and still feeling like you’re losing, you’re not crazy—the system is designed to keep you treading water.
+If you’re making minimum payments and still feeling like you’re losing, you’re not crazy. The system is built to keep you treading water.
 
-**Enough To Evolve** is my public field journal for climbing out: the numbers, the mistakes, what worked, and what didn’t. I’m not a CFP. I’m building a repeatable system under real constraints and publishing it so you can copy it.
+**Enough To Evolve** is my field journal for climbing out. I’m not a CFP. I’m building a repeatable system under real constraints and publishing it so you can copy it.
 
-## What “Minimums to Momentum” means
+## Why this matters
 Minimum payments are a *survival setting*. Momentum is when your money starts removing future problems:
 
 - one less payment
@@ -19,7 +19,7 @@ Minimum payments are a *survival setting*. Momentum is when your money starts re
 
 The goal isn’t perfection. The goal is **reliable progress**.
 
-## The 4-part method
+## The 4-part method (Minimums → Momentum)
 ### 1) Stabilize (stop the bleeding)
 Before you “pay off debt faster,” you have to stop the leaks:
 
@@ -28,7 +28,7 @@ Before you “pay off debt faster,” you have to stop the leaks:
 - random bill chaos
 - “minimums ate my entire paycheck” weeks
 
-**Rule:** if your cashflow is unstable, paydown strategies fail.
+**Rule:** If cashflow is unstable, paydown strategies fail.
 
 ### 2) Control (make the numbers obey)
 This is the boring part that changes everything:
@@ -42,36 +42,61 @@ This is the boring part that changes everything:
 ### 3) Paydown (reduce the number of problems)
 Once cashflow stops surprising you, you can attack debt with consistency.
 
-This site focuses on strategies that work when you’re not living in a spreadsheet fantasy:
+This site focuses on tactics that work when you’re not living in a spreadsheet fantasy:
 
 - hybrid avalanche/snowball depending on cashflow
 - scripts to lower APRs or get hardship terms
-- “one extra payment” tactics that create wins without breaking the month
+- “one extra payment” moves that create wins without breaking the month
 
 ### 4) Grow (income stacking without burnout)
 If the margin is too thin, the fastest path is usually:
 
 - cut the worst leaks
 - stack reliable income
-- convert it into *removing a payment*, not upgrading lifestyle
+- convert it into **removing a payment**, not upgrading lifestyle
 
-## My content promise
-Every post will include at least **two** of the following:
+## Step-by-step: your first 7 days
+1) List all minimums + due dates (round numbers are fine).
+2) Identify the single bill or fee that scares you most.
+3) Build a 20-minute weekly check‑in (see the dashboard below).
+4) Pick **one** momentum move you can complete in 7 days.
+5) Assign any extra money to remove a future problem (not a nice‑to‑have).
 
-- real examples with rounded/anonymized numbers
-- original templates (spreadsheets, scripts, checklists)
-- the decision rules I actually used
-- what happened after I tried it
+## Example (rounded/anonymized)
+- Total minimums: ~$820
+- Must‑pays before next paycheck: ~$560
+- Buffer: ~$90
+- Highest APR card: ~29% APR, min ~$35
+- Momentum move: pay $25 *before* statement close + call for APR reduction
 
-If I can’t make it concrete, I won’t publish it.
+That week wasn’t a “big win,” but it prevented a fee and lowered interest. That’s the start.
 
-## Start here (15 minutes)
-1) Download the free toolkit (Dashboard + Scripts + Tracker)
-2) Fill in just the top-line numbers (balances, minimums, due dates)
-3) Pick **one leak** to stop this week (fee, overdraft, a bill you can negotiate)
+## Checklist (10 minutes)
+- [ ] All minimums listed with due dates
+- [ ] One leak to stop this week
+- [ ] One momentum move scheduled
+- [ ] Cash buffer target set (even if it’s $50)
+- [ ] Next statement dates visible
 
-## What to read next
-- Catch-up budget template (when you’re behind)
-- Debt snowball vs avalanche (when cashflow is tight)
-- How to ask for a lower APR (exact script + outcomes log)
-- Uber net pay calculator (profit, not revenue)
+## Common mistakes I made (so you don’t have to)
+- Chasing a perfect budget before stabilizing cashflow
+- Paying extra on debt while late fees kept stacking
+- Ignoring statement dates and missing quick wins
+- Treating side income like spending money instead of problem removal
+
+## Mini FAQ
+**Do I need a full budget?**
+No. Start with minimums, must‑pays, and one weekly decision.
+
+**What if I can’t cover all minimums?**
+You’re in triage mode. Fund must‑pays, then minimums that prevent immediate damage. Use the catch‑up template.
+
+**How much buffer should I have?**
+Start with “enough to prevent fees,” then build toward one month.
+
+## Next steps
+- Read: [My Weekly Money Dashboard](/blog/weekly-money-dashboard/)
+- Use: [The Catch‑Up Budget Template](/blog/catch-up-budget-template/)
+- Script: [Lower APR Call Script](/blog/lower-apr-call-script/)
+- Understand: [The Minimum Payments Trap](/blog/minimum-payments-trap/)
+- Grab the free toolkit: [Toolkit](/toolkit/)

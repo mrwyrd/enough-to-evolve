@@ -15,6 +15,9 @@ You don’t need a perfect category system. You need a **catch‑up plan** that 
 
 Below is the template I use. It’s built for uneven income, multiple debts, and “surprise” weeks.
 
+## Why it matters
+The catch‑up budget is triage. It keeps you housed, stops the worst fees, and buys you enough stability to make progress later.
+
 ## The Catch‑Up Budget (4 buckets)
 ### Bucket 1: Must‑pays (keep the lights on)
 These are the bills that, if missed, break your life quickly.
@@ -28,7 +31,7 @@ Examples:
 **Rule:** Must‑pays get funded before you get fancy.
 
 ### Bucket 2: Minimums (prevent defaults)
-This is where you stop the credit-score/fees spiral.
+This is where you stop the credit‑score/fees spiral.
 
 Examples:
 - credit card minimums
@@ -52,14 +55,28 @@ Examples:
 - one phone call to reduce APR / waive fees
 - one extra driving shift assigned to “remove one payment”
 
-## Weekly flow (20 minutes)
-1) List money coming in before next payday
-2) List must‑pays due before next payday
-3) List minimums due before next payday
-4) Fund must‑pays → minimums → buffer
-5) Pick **one momentum move**
+## Step‑by‑step weekly flow (20 minutes)
+1) List money coming in before next payday.
+2) List must‑pays due before next payday.
+3) List minimums due before next payday.
+4) Fund must‑pays → minimums → buffer.
+5) Pick **one momentum move**.
 
 If you do those five steps every week, you stop being surprised.
+
+## Example (rounded/anonymized)
+- Income before payday: ~$1,150
+- Must‑pays: ~$620
+- Minimums: ~$310
+- Buffer: $50
+- Momentum move: call for APR reduction + pay $20 early on target card
+
+## Checklist
+- [ ] Income before payday listed
+- [ ] Must‑pays funded first
+- [ ] Minimums covered (or triage applied)
+- [ ] Buffer funded, even if small
+- [ ] One momentum move scheduled
 
 ## Triage order (if you can’t cover everything)
 This is the order I use when money is short (rounding and anonymizing numbers is fine):
@@ -72,6 +89,23 @@ This is the order I use when money is short (rounding and anonymizing numbers is
 
 This is not financial advice. It’s survival math.
 
-## What to do next
-- If you haven’t: read **Start Here**: /blog/start-here/
-- Build your weekly dashboard: /blog/weekly-money-dashboard/
+## Common mistakes
+- Treating subscriptions like must‑pays
+- Skipping the buffer because it “feels small”
+- Spreading money across every debt instead of protecting essentials
+
+## Mini FAQ
+**Isn’t this just a budget?**
+It’s a survival‑first budget. The order matters more than the categories.
+
+**What if I have past‑due bills?**
+Put them in must‑pays or minimums depending on what breaks first.
+
+**How long should I stay in catch‑up mode?**
+Until your buffer stops bleeding and minimums are consistent.
+
+## Next steps
+- Start the overall system: [Start Here](/blog/start-here/)
+- Build the weekly view: [Weekly Money Dashboard](/blog/weekly-money-dashboard/)
+- Ask for better terms: [Lower APR Call Script](/blog/lower-apr-call-script/)
+- Grab the free toolkit: [Toolkit](/toolkit/)

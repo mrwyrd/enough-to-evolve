@@ -10,11 +10,14 @@ If you’re stuck paying interest, the fastest win is often **changing the terms
 Here’s a call script you can use to ask for:
 - an APR reduction
 - a hardship program
-- late-fee/interest waiver
+- late‑fee/interest waiver
 
-*(This is not legal/financial advice; it’s a practical script.)*
+*(Not legal/financial advice; just a practical script.)*
 
-## Before you call (2 minutes)
+## Why it matters
+Lower APR = fewer dollars burning every month. One successful call can save more than months of micro‑payments.
+
+## Step‑by‑step: the 10‑minute prep
 Have ready:
 - your current balance (rounded is fine)
 - your current APR (or “I’m not sure, please tell me”)
@@ -43,15 +46,37 @@ Ask these explicitly:
 - Does it report as a hardship program?
 - When does the new APR/payment start?
 
-## What to log (so it becomes momentum)
-Create a simple log:
-- date
-- rep name/id
-- offer (APR/payment/duration)
-- next action
+## Example outcome log (rounded/anonymized)
+- Date: Feb 3
+- Rep: “JB”
+- Request: lower APR or hardship
+- Offer: APR drop from ~29% → ~19% for 12 months
+- Next action: call back 60 days before promo ends
 
-If you call 3 times over 30 days, the odds go up.
+## Checklist (copy/paste)
+- [ ] Balance + APR in front of me
+- [ ] Ask: “Any APR reduction or hardship options?”
+- [ ] Ask: terms, duration, and whether card closes
+- [ ] Log rep name + offer
+- [ ] Set a reminder if temporary
 
-## What to do next
-- Build your weekly dashboard: /blog/weekly-money-dashboard/
-- Use the catch‑up budget system: /blog/catch-up-budget-template/
+## Common mistakes
+- Calling without your ask (you’ll get a generic “no”)
+- Accepting a payment plan that *doesn’t* reduce APR
+- Forgetting to set a reminder when a promo expires
+
+## Mini FAQ
+**Will this hurt my score?**
+APR reductions usually don’t. Hardship plans might; ask how it’s reported.
+
+**How often can I call?**
+I try 2–3 attempts over 30–45 days.
+
+**What if I’m already late?**
+Ask for a fee waiver first, then negotiate terms.
+
+## Next steps
+- Build the weekly view: [Weekly Money Dashboard](/blog/weekly-money-dashboard/)
+- Use triage when you’re behind: [Catch‑Up Budget Template](/blog/catch-up-budget-template/)
+- Understand cashflow sequencing: [Statement Date vs Due Date](/blog/statement-date-vs-due-date/)
+- Grab the free toolkit: [Toolkit](/toolkit/)
