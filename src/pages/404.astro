@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Not found">
+  <div class="card">
+    <h1 class="h1">404</h1>
+    <p class="muted">That page doesn’t exist. Try the blog index or start here.</p>
+    <div style="display:flex; gap:12px; flex-wrap:wrap">
+      <a class="focusable" href="/blog"><b>Go to Blog</b></a>
+      <a class="focusable" href="/blog/start-here"><b>Start Here</b></a>
+    </div>
+  </div>
+</BaseLayout>

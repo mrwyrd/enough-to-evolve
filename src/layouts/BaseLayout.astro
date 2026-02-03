@@ -1,13 +1,15 @@
 ---
-const { title, description, canonical } = Astro.props;
-const siteName = 'Enough To Evolve';
-const siteTagline = 'Turning minimum payments into momentum.';
+import { SITE } from '../consts';
 
-const pageTitle = title ? `${title} | ${siteName}` : `${siteName} — ${siteTagline}`;
-const pageDescription = description ?? 'A numbers-first field journal for building financial stability under real constraints.';
+const { title, description, canonical, type } = Astro.props;
 
-const url = new URL(Astro.request.url);
-const canon = canonical ?? url.toString();
+const pageTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} — ${SITE.tagline}`;
+const pageDescription = description ?? SITE.description;
+
+const reqUrl = new URL(Astro.request.url);
+const canon = canonical ?? reqUrl.toString();
+
+const ogType = type ?? 'website';
 ---
 
 <!doctype html>
@@ -15,13 +17,14 @@ const canon = canonical ?? url.toString();
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canon} />
 
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canon} />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -30,29 +33,53 @@ const canon = canonical ?? url.toString();
     <link rel="icon" href="/favicon.ico" />
 
     <link rel="stylesheet" href="/styles/global.css" />
+
+    <script>
+      // Theme toggle (no framework)
+      (function () {
+        const key = 'ete-theme';
+        const stored = localStorage.getItem(key);
+        const preferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        const theme = stored || preferred;
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        window.__setTheme = function (next) {
+          document.documentElement.dataset.theme = next;
+          document.documentElement.style.colorScheme = next;
+          localStorage.setItem(key, next);
+        };
+      })();
+    </script>
   </head>
   <body>
+    <a class="skip" href="#content">Skip to content</a>
+
     <header class="site">
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a class="brand" href="/">
-          <b>Enough To Evolve</b>
-          <small class="muted">Minimums → Momentum</small>
+          <b>{SITE.name}</b>
+          <small class="muted">{SITE.tagline}</small>
         </a>
-        <div style="display:flex; gap:12px; align-items:center">
+
+        <div class="navlinks">
           <a href="/blog">Blog</a>
+          <a href="/tags">Tags</a>
           <a href="/about">About</a>
-          <span class="badge">No hype. Just numbers.</span>
+          <button class="theme" type="button" aria-label="Toggle theme" onclick="(function(){const cur=document.documentElement.dataset.theme||'dark'; window.__setTheme(cur==='dark'?'light':'dark');})()">
+            Theme
+          </button>
         </div>
       </nav>
     </header>
 
-    <main class="container">
+    <main id="content" class="container">
       <slot />
     </main>
 
     <footer>
-      <div class="container">
-        <div class="muted">© {new Date().getFullYear()} Enough To Evolve • <a href="/privacy">Privacy</a></div>
+      <div class="container foot">
+        <div class="muted">© {new Date().getFullYear()} {SITE.name}</div>
+        <div class="muted"><a href="/privacy">Privacy</a> • <a href="/rss.xml">RSS</a></div>
       </div>
     </footer>
   </body>

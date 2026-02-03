@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { SITE } from '../consts';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -8,20 +9,41 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 ---
 
 <BaseLayout>
-  <div class="card">
-    <span class="badge">Field journal</span>
-    <h1 class="h1">Enough To Evolve</h1>
-    <p class="muted" style="margin:0 0 14px">
-      Turning minimum payments into momentum — with real (rounded/anonymized) numbers, templates, and experiments.
-    </p>
+  <section class="grid cols2">
+    <div class="card">
+      <span class="badge">Field journal</span>
+      <h1 class="h1">{SITE.name}</h1>
+      <p class="muted" style="margin:0 0 18px">
+        {SITE.description}
+      </p>
 
-    <div class="cta">
-      <b>Free toolkit (coming next):</b> Debt Escape Dashboard + Call Scripts Pack + Gig Profit Tracker.
-      <div class="muted" style="margin-top:6px">No spam. Just the stuff that works.</div>
+      <div class="cta">
+        <b>Free toolkit (coming next):</b> Debt Escape Dashboard + Call Scripts Pack + Gig Profit Tracker.
+        <div class="muted" style="margin-top:6px">No spam. Just the stuff that works.</div>
+      </div>
+
+      <hr />
+
+      <div class="grid" style="gap:10px">
+        <a class="focusable" href="/blog/start-here"><b>Start here →</b></a>
+        <span class="muted">If you’re stuck in minimums, start with the method and the weekly dashboard.</span>
+      </div>
     </div>
 
-    <hr />
+    <aside class="card">
+      <h2 class="h2" style="margin-top:0">What you’ll find here</h2>
+      <ul class="muted" style="margin:0; padding-left:18px">
+        <li>Debt payoff tactics that work with real cashflow constraints</li>
+        <li>Call scripts + templates (APR, fees, hardship programs)</li>
+        <li>Gig income: profit-first tracking, schedules, and burnout-proof systems</li>
+        <li>Weekly review routines that prevent “surprise” weeks</li>
+      </ul>
+      <hr />
+      <div class="muted">New here? Read <a href="/blog/start-here">Start Here</a>.</div>
+    </aside>
+  </section>
 
+  <section style="margin-top:18px">
     <h2 class="h2">Latest posts</h2>
     <ul class="post-list">
       {posts.map((p) => (
@@ -34,5 +56,5 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     </ul>
 
     <div style="margin-top:14px"><a href="/blog">All posts →</a></div>
-  </div>
+  </section>
 </BaseLayout>
