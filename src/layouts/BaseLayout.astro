@@ -1,0 +1,59 @@
+---
+const { title, description, canonical } = Astro.props;
+const siteName = 'Enough To Evolve';
+const siteTagline = 'Turning minimum payments into momentum.';
+
+const pageTitle = title ? `${title} | ${siteName}` : `${siteName} — ${siteTagline}`;
+const pageDescription = description ?? 'A numbers-first field journal for building financial stability under real constraints.';
+
+const url = new URL(Astro.request.url);
+const canon = canonical ?? url.toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canon} />
+
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canon} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <header class="site">
+      <nav class="nav">
+        <a class="brand" href="/">
+          <b>Enough To Evolve</b>
+          <small class="muted">Minimums → Momentum</small>
+        </a>
+        <div style="display:flex; gap:12px; align-items:center">
+          <a href="/blog">Blog</a>
+          <a href="/about">About</a>
+          <span class="badge">No hype. Just numbers.</span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="muted">© {new Date().getFullYear()} Enough To Evolve • <a href="/privacy">Privacy</a></div>
+      </div>
+    </footer>
+  </body>
+</html>
