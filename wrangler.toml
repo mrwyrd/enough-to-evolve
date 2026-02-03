@@ -1,0 +1,5 @@
+name = "enough-to-evolve"
+compatibility_date = "2026-02-03"
+
+[assets]
+directory = "./dist"
